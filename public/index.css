@@ -1,0 +1,19 @@
+.mainDiv {
+    background-color: rgb(78, 161, 50);
+}
+
+.player-cont {
+    background-color: azure;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.deleteicon {
+    width: 35px;
+    height: 35px;
+}
+
+.editicon {
+    width: 45px;
+    height: 45px;
+}

@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+    <link rel="stylesheet" href="index.css">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MVPProject</title>
 </head>
 <body>
-    <h1>WELCOME TO MY FAVORITE SOCCER PLAYERS API!</h1>
-    <p>To access all the favorite soccer player list use the /favorite/players route.</p>
-    <p>To access a single favorite soccer player list use the /favorite/players/:id route.</p>
-    <p>To create a favorite soccer player you will need a body and make a post request to the /favorite/players route.</p>
-    <p>To update a favorite soccer player you will need a body and make a put request to the /favorite/players/:id route.</p>
-    <p>To delet a favorite soccer player you will need to make a delete request to the /favorite/players/:id route.</p>
-    
+    <h1>Favorite Soccer Players List</h1>
+    <form >
+        <label for="playerName">Player Name</label>
+        <input id = 'playerName' type="text">
+        <label  for="playerNum">Player Number</label>
+        <input id = 'playerNum' type="number">
+        <label  for="playerPos">Player Position</label>
+        <input id = 'playerPos' type="text">
+        <label  for="playerTeam">Player Team</label>
+        <input id = 'playerTeam' type="text">
+        <input id = submit type="submit" value="Submit">
+    </form>
+    <div id="mainDiv" class="mainDiv"></div>
 </body>
 <script src="page.js"></script>
 </html>
