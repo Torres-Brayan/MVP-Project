@@ -17,3 +17,7 @@
     width: 45px;
     height: 45px;
 }
+
+.form-popup {
+    display: none;
+}

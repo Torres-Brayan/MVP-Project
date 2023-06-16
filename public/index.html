@@ -9,18 +9,44 @@
 </head>
 <body>
     <h1>Favorite Soccer Players List</h1>
-    <form >
+
         <label for="playerName">Player Name</label>
         <input id = 'playerName' type="text">
+
         <label  for="playerNum">Player Number</label>
         <input id = 'playerNum' type="number">
+
         <label  for="playerPos">Player Position</label>
         <input id = 'playerPos' type="text">
+
         <label  for="playerTeam">Player Team</label>
         <input id = 'playerTeam' type="text">
+        
         <input id = submit type="submit" value="Submit">
-    </form>
+
     <div id="mainDiv" class="mainDiv"></div>
+
+    <div class="form-popup" id="myForm">
+        
+          <h1>Update Player</h1>
+      
+          <label for="upPlayerName">Player Name</label>
+        <input id = 'upPlayerName' type="text">
+
+        <label  for="upPlayerNum">Player Number</label>
+        <input id = 'upPlayerNum' type="number">
+
+        <label  for="upPlayerPos">Player Position</label>
+        <input id = 'upPlayerPos' type="text">
+
+        <label  for="upPlayerTeam">Player Team</label>
+        <input id = 'upPlayerTeam' type="text">
+      
+          <button id = 'submitUpdate'type="submit" class="btn">submit</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        
+      </div>
+    
 </body>
 <script src="page.js"></script>
 </html>
