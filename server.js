@@ -38,11 +38,11 @@ app.get("/favorite/players/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const result = await pool.query(
-      "SELECT name, number, position, team FROM favorite_soccer_players WHERE id = $1",
+      "SELECT name, number, position, team FROM favorite_soccer_players WHERE name = $1",
       [id]
     );
     if (!result.rows[0]) {
-      return res.status(404).send("No favorite player at given ID.");
+      return res.status(404).send("No favorite player at given name.");
     }
     res.status(200).json(result.rows[0]);
   } catch (error) {
@@ -78,7 +78,7 @@ app.put("/favorite/players/:id", async (req, res) => {
         .send("Check body for name, number, position, team.");
     }
     const result = await pool.query(
-      "UPDATE favorite_soccer_players SET name = $1, number = $2, position= $3, team = $4 WHERE id = $5 RETURNING name, number, position, team",
+      "UPDATE favorite_soccer_players SET name = $1, number = $2, position= $3, team = $4 WHERE name = $5 RETURNING name, number, position, team",
       [name, number, position, team, id]
     );
     if (!result.rows[0]) {
@@ -94,7 +94,7 @@ app.delete("/favorite/players/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const result = await pool.query(
-      "DELETE FROM favorite_soccer_players WHERE id = $1 RETURNING name, number, position, team",
+      "DELETE FROM favorite_soccer_players WHERE name = $1 RETURNING name, number, position, team",
       [id]
     );
     if (!result.rows[0]) {
