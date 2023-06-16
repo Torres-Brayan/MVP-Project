@@ -9,7 +9,8 @@
 </head>
 <body>
     <h1>Favorite Soccer Players List</h1>
-
+    <button class="open-button" onclick="openForm2()">Add Player</button>
+    <div class="form-popup2" id="myForm2">
         <label for="playerName">Player Name</label>
         <input id = 'playerName' type="text">
 
@@ -23,6 +24,8 @@
         <input id = 'playerTeam' type="text">
         
         <input id = submit type="submit" value="Submit">
+        <button type="button" class="btn cancel" onclick="closeForm2()">Close</button>
+    </div>
 
     <div id="mainDiv" class="mainDiv"></div>
 

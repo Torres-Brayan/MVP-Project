@@ -71,7 +71,7 @@ function getData() {
         let player = response[i];
         let playerCont = document.createElement("div");
         playerCont.setAttribute("class", "player-cont");
-        let mainPage = document.querySelector("div");
+        let mainPage = document.getElementById("mainDiv");
         mainPage.appendChild(playerCont);
         let playerName = document.createElement("p");
         playerName.setAttribute("class", "player-name");
@@ -153,3 +153,11 @@ function openForm(playerName) {
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
 }
+
+function openForm2() {
+    document.getElementById("myForm2").style.display = "block";
+  }
+
+function closeForm2() {
+    document.getElementById("myForm2").style.display = "none";
+  }
