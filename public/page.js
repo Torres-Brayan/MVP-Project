@@ -51,7 +51,8 @@ function editFavPlayer(id, name1, number1, position1, team1) {
     .then((response) => response.json())
     .then((data) => {
         console.log(data)
-        location.reload()})
+        location.reload()
+    })
     .catch((err) => {
       alert(err.code);
     });
@@ -78,28 +79,25 @@ function getData() {
         playerName.textContent = player.name;
         playerCont.appendChild(playerName);
         let playerNum = document.createElement("p");
-        playerNum.textContent = player.number;
+        playerNum.textContent = `Number: ${player.number}`;
         playerCont.appendChild(playerNum);
         let playerPos = document.createElement("p");
-        playerPos.textContent = player.position;
+        playerPos.textContent = `Position: ${player.position}`;
         playerCont.appendChild(playerPos);
         let playerTeam = document.createElement("p");
-        playerTeam.textContent = player.team;
+        playerTeam.textContent = `Team: ${player.team}`;
         playerCont.appendChild(playerTeam);
-        let icons = document.createElement("div");
-        icons.setAttribute("class", "icons");
-        playerCont.appendChild(icons);
         let deleteIcon = document.createElement("img");
         deleteIcon.setAttribute("class", "deleteicon");
         deleteIcon.src =
           "https://upload.wikimedia.org/wikipedia/commons/5/5f/Red_X.svg";
-        icons.appendChild(deleteIcon);
+        playerCont.appendChild(deleteIcon);
 
         let editIcon = document.createElement("img");
         editIcon.setAttribute("class", "editicon");
         editIcon.src =
           "https://cdn.icon-icons.com/icons2/2483/PNG/512/edit_circle_icon_149940.png";
-        icons.appendChild(editIcon);
+        playerCont.appendChild(editIcon);
 
         console.log(player);
       }
@@ -123,25 +121,30 @@ submitBtn.addEventListener("click", (e) => {
 
 // add event listener to deleteIcon
 document.addEventListener("click", function (event) {
+    event.preventDefault();
   const targetElement = event.target;
   const deletIconElement = targetElement.closest(".deleteicon");
   const editIconElement = targetElement.closest(".editicon");
   if (deletIconElement) {
-    let playerElem = event.target.parentElement.parentElement;
+    let playerElem = event.target.parentElement;
     const playerName = playerElem.querySelector(".player-name").textContent;
+    console.log(playerElem)
+    console.log(playerName)
     deletePlayer(playerName);
   }
   if (editIconElement) {
-    let playerElem = event.target.parentElement.parentElement;
+    let playerElem = event.target.parentElement;
     const playerName = playerElem.querySelector(".player-name").textContent;
     openForm(playerName);
   }
 });
 
 function openForm(playerName) {
+    console.log(playerName)
   document.getElementById("myForm").style.display = "block";
   const myButton = document.getElementById("submitUpdate");
   myButton.addEventListener("click", function (event) {
+    event.preventDefault();
     const newPname = document.getElementById("upPlayerName").value;
     const newPnum = document.getElementById("upPlayerNum").value;
     const newPpos = document.getElementById("upPlayerPos").value;
