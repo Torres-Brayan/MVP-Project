@@ -1,136 +1,154 @@
 .main-Div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 800px;
-    margin: 0 auto; /* Add margin auto to horizontally center the container */
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto; /* Add margin auto to horizontally center the container */
+}
 
 .player-cont {
-    background-color: azure;
-    text-align: center;
-    width: 400px;
-    opacity: .5;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    margin: 10px;
-    font-family: 'Monomaniac One', sans-serif;
+  background-color: azure;
+  text-align: center;
+  width: 400px;
+  opacity: 0.5;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin: 10px;
+  font-family: "Monomaniac One", sans-serif;
+}
+
+.player-cont:hover {
+  background-color: rgb(208, 250, 250);
 }
 
 .deleteicon {
-    width: 35px;
-    height: 35px;
-    align-items: flex-start;
-    position: absolute; /* Add position absolute */
-    top: 5px; /* Adjust top position */
-    left: 5px; /* Adjust left position */
+  width: 35px;
+  height: 35px;
+  align-items: flex-start;
+  position: absolute; /* Add position absolute */
+  top: 5px; /* Adjust top position */
+  left: 5px; /* Adjust left position */
+  cursor: pointer;
 }
 
 .editicon {
-    width: 45px;
-    height: 45px;
-    position: absolute; /* Add position absolute */
-    top: 5px; /* Adjust top position */
-    right: 5px; /* Adjust right position */
+  width: 45px;
+  height: 45px;
+  position: absolute; /* Add position absolute */
+  top: 5px; /* Adjust top position */
+  right: 5px; /* Adjust right position */
+  cursor: pointer;
+}
+
+.edit-button {
+  position: absolute; /* Add position absolute */
+  top: 5px; /* Adjust top position */
+  right: 5px; /* Adjust right position */
+  cursor: pointer;
+}
+
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border: 3px solid #ccc;
+  z-index: 9;
+  color: dimgray;
+}
+
+.form-popup h2 {
+  margin-top: 0;
+}
+
+.form-popup form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-popup label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-popup input {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form-buttons button {
+  padding: 5px 10px;
+  margin-left: 10px;
+}
+
+.form-popup2 {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border: 3px solid #ccc;
+  z-index: 9;
+  color: dimgray;
+}
+
+.form-popup2 h2 {
+  margin-top: 0;
+}
+
+.form-popup2 form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-popup2 label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-popup2 input {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.form-buttons2 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form-buttons2 button {
+  padding: 5px 10px;
+  margin-left: 10px;
+}
+
+.page-title {
+  font-family: "Bebas Neue", sans-serif;
+  text-align: center;
+  font-size: xx-large;
+}
+
+.page-background {
+  background-image: url("https://images.pexels.com/photos/114296/pexels-photo-114296.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.open-button {
+  cursor: pointer;
 }
 
 
-.form-popup {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    padding: 20px;
-    background-color: #f1f1f1;
-    border: 3px solid #ccc;
-    z-index: 9;
-    color: dimgray;
-  }
-  
-  .form-popup h2 {
-    margin-top: 0;
-  }
-  
-  .form-popup form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .form-popup label {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .form-popup input {
-    padding: 5px;
-    margin-bottom: 10px;
-  }
-  
-  .form-buttons {
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .form-buttons button {
-    padding: 5px 10px;
-    margin-left: 10px;
-  }
-
-  .form-popup2 {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    padding: 20px;
-    background-color: #f1f1f1;
-    border: 3px solid #ccc;
-    z-index: 9;
-    color: dimgray;
-  }
-
-  .form-popup2 h2 {
-    margin-top: 0;
-  }
-  
-  .form-popup2 form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .form-popup2 label {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .form-popup2 input {
-    padding: 5px;
-    margin-bottom: 10px;
-  }
-  
-  .form-buttons2 {
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .form-buttons2 button {
-    padding: 5px 10px;
-    margin-left: 10px;
-  }
-
-  .page-title {
-    font-family: 'Bebas Neue', sans-serif;
-    text-align: center;
-    font-size: xx-large;
-  }
-
-   .page-background {
-    background-image: url('https://images.pexels.com/photos/114296/pexels-photo-114296.jpeg');
-    background-size: cover;
-    background-attachment: fixed;
-   }
