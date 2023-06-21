@@ -25,11 +25,12 @@
   align-items: center;
   justify-content: space-between;
   position: relative;
-  margin: 10px;
+  margin: 2rem;
   font-family: "Monomaniac One", sans-serif;
   transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   list-style: none;
 }
+
 #top20playercont {
   background-color: #303030;
   background-color: #303030;
@@ -37,14 +38,21 @@
   opacity: 0.9;
   font-size: 1rem;
   text-align: center;
-  width: 400px;
+  width: 20rem;
+  height: 10rem;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
   position: relative;
-  margin: 10px;
+  margin: 2rem;
   font-family: "Monomaniac One", sans-serif;
   transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   list-style: none;
+}
+
+#top20playercont > * {
+  margin: 0.5rem 0;
 }
 
 #top20playercont:hover {
@@ -98,7 +106,7 @@
   transform: translate(-50%, -50%);
   width: 300px;
   padding: 20px;
-  background-color: #303030;
+  background-color: #545454;
   border: 3px solid #303030;
   z-index: 9;
   color: #cccccc;
