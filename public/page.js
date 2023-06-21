@@ -100,12 +100,12 @@ async function getSinglePlayer(id) {
     playerTeamInput.value = player.team;
 
     deleteIcon.setAttribute("class", "deleteicon");
-    deleteIcon.textContent = 'Delete';
+    deleteIcon.textContent = "Delete";
     playerCont.appendChild(deleteIcon);
 
     let editIcon = document.createElement("li");
     editIcon.setAttribute("class", "editicon");
-    editIcon.textContent = 'Edit';
+    editIcon.textContent = "Edit";
     playerCont.appendChild(editIcon);
   } catch (err) {
     console.log(err);
@@ -170,15 +170,15 @@ submitBtn.addEventListener("click", (e) => {
 });
 
 const myButton = document.getElementById("submitUpdate");
-    myButton.addEventListener("click", function (event) {
-    const playerName = document.getElementById("hiddenPlayerName").value;
-    const newPname = document.getElementById("hiddenPlayerName").value;
-    const newPnum = document.getElementById("upPlayerNum").value;
-    const newPpos = document.getElementById("upPlayerPos").value;
-    const newPteam = document.getElementById("upPlayerTeam").value;
-    editFavPlayer(playerName, newPname, newPnum, newPpos, newPteam);
-    closeForm();
-  });
+myButton.addEventListener("click", function (event) {
+  const playerName = document.getElementById("hiddenPlayerName").value;
+  const newPname = document.getElementById("hiddenPlayerName").value;
+  const newPnum = document.getElementById("upPlayerNum").value;
+  const newPpos = document.getElementById("upPlayerPos").value;
+  const newPteam = document.getElementById("upPlayerTeam").value;
+  editFavPlayer(playerName, newPname, newPnum, newPpos, newPteam);
+  closeForm();
+});
 
 // add event listener to deleteIcon and editicon
 document.addEventListener("click", function (event) {
@@ -208,12 +208,12 @@ document.addEventListener("click", function (event) {
   if (homeButton) {
     getData();
     document.getElementById("top20Div").style.display = "none";
-    document.getElementById('mainDiv').style.display = "flex";
+    document.getElementById("mainDiv").style.display = "flex";
   }
   if (top20Btn) {
-    topTwenty()
+    topTwenty();
     document.getElementById("top20Div").style.display = "flex";
-    document.getElementById('mainDiv').style.display = "none";
+    document.getElementById("mainDiv").style.display = "none";
   }
 });
 
@@ -241,19 +241,20 @@ function closeForm2() {
 
 async function topTwenty() {
   try {
-    const url = 'https://api-football-v1.p.rapidapi.com/v3/players/topscorers?league=39&season=2022';
+    const url =
+      "https://api-football-v1.p.rapidapi.com/v3/players/topscorers?league=39&season=2022";
     const options = await {
-      method: 'GET',
+      method: "GET",
       headers: {
-        'X-RapidAPI-Key': '497192c640mshf59c205dbdf7e60p14e4dbjsnfa30c7d4106f',
-        'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
-      }
+        "X-RapidAPI-Key": "497192c640mshf59c205dbdf7e60p14e4dbjsnfa30c7d4106f",
+        "X-RapidAPI-Host": "api-football-v1.p.rapidapi.com",
+      },
     };
     const response = await fetch(url, options);
     const result = await response.json();
     const toptwenty = document.getElementById("top20Div");
     const toptwentyresults = result.response;
-    toptwenty.innerHTML = '';
+    toptwenty.innerHTML = "";
     for (var i = 0; i < toptwentyresults.length; i++) {
       const htmlBlock = `
         <div id = "top20playercont"
@@ -268,4 +269,3 @@ async function topTwenty() {
     console.error(error);
   }
 }
-

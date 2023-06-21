@@ -18,7 +18,7 @@
 .player-cont {
   background-color: #303030;
   color: #cccccc;
-  opacity: .9;
+  opacity: 0.9;
   font-size: 1rem;
   text-align: center;
   width: 400px;
@@ -34,7 +34,7 @@
   background-color: #303030;
   background-color: #303030;
   color: #cccccc;
-  opacity: .9;
+  opacity: 0.9;
   font-size: 1rem;
   text-align: center;
   width: 400px;
@@ -70,7 +70,7 @@
 .editicon {
   position: absolute;
   top: 10px;
-  right: 24px; 
+  right: 24px;
 }
 
 .editicon:hover {
@@ -101,7 +101,7 @@
   background-color: #303030;
   border: 3px solid #303030;
   z-index: 9;
-  color:  #cccccc;
+  color: #cccccc;
 }
 
 .form-popup h2 {
@@ -169,4 +169,3 @@
   cursor: pointer;
   color: #046b04;
 }
-
