@@ -1,8 +1,13 @@
 DROP TABLE IF EXISTS favorite_soccer_players;
+DROP TABLE IF EXISTS users;
 
+
+
+-- Create the Player table
 CREATE TABLE favorite_soccer_players (
-    name varchar(50) PRIMARY KEY,
-    number integer,
-    position varchar(50),
-    team varchar(50)
+  player_id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  position VARCHAR(255) NOT NULL,
+  team VARCHAR(255) NOT NULL,
+  number INTEGER NOT NULL
 );

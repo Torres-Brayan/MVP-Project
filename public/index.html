@@ -1,76 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="index.css">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Monomaniac+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Monomaniac+One&display=swap"
+      rel="stylesheet"
+    />
     <title>MVPProject</title>
-</head>
-<body class = 'page-background'>
-    <h1 class="page-title" >Favorite Soccer Players List</h1>
-    <button class = "home-button">Home</button>
-    <button class="open-button" onclick="openForm2()">Add Player</button>
+  </head>
+  <body class="page-background">
+    <div id="navbar">
+      <h1 class="page-title">Favorite Soccer Players List</h1>
+      <ul id="list">
+        <li id="listitem" class="home-button">Home</li>
+        <li id="listitem" class="open-button" onclick="openForm2()">
+          Add Player
+        </li>
+        <li id="listitem" class = "top-20">Top 20</li>
+      </ul>
+    </div>
 
-    <div class="form-popup2" id="myForm2">
+    <div class="form-popup" id="myForm2">
+      <h2>Add Player</h2>
 
-        <h2>Add Player</h1>
-
-        <form id="updateForm2">
-
+      <form id="updateForm2">
         <label for="playerName">Player Name</label>
-        <input id = 'playerName' type="text">
+        <input id="playerName" type="text" />
 
-        <label  for="playerNum">Player Number</label>
-        <input id = 'playerNum' type="number">
+        <label for="playerNum">Player Number</label>
+        <input id="playerNum" type="number" />
 
-        <label  for="playerPos">Player Position</label>
-        <input id = 'playerPos' type="text">
+        <label for="playerPos">Player Position</label>
+        <input id="playerPos" type="text" />
 
-        <label  for="playerTeam">Player Team</label>
-        <input id = 'playerTeam' type="text">
+        <label for="playerTeam">Player Team</label>
+        <input id="playerTeam" type="text" />
 
         <div class="form-buttons">
-
-        <button id = 'submit' type="submit" class="btn">submit</button>
-        <button type="button" class="btn cancel" onclick="closeForm2()">Close</button>
-    
+          <button id="submit" type="submit" class="btn">submit</button>
+          <button type="button" class="btn cancel" onclick="closeForm2()">
+            Close
+          </button>
+        </div>
+      </form>
     </div>
-    </form>
-    </div>
-
 
     <div id="mainDiv" class="main-Div"></div>
 
     <div class="form-popup" id="myForm">
-        
-          <h2>Update Player</h2>
+      <h2>Update Player</h2>
 
-        <form id="updateForm">
-        
+      <form id="updateForm">
         <label for="upPlayerName">Player Name</label>
-        <input id = 'upPlayerName' type="text">
+        <input id="upPlayerName" type="text" />
 
-        <label  for="upPlayerNum">Player Number</label>
-        <input id = 'upPlayerNum' type="number">
+        <label for="upPlayerNum">Player Number</label>
+        <input id="upPlayerNum" type="number" />
 
-        <label  for="upPlayerPos">Player Position</label>
-        <input id = 'upPlayerPos' type="text">
+        <label for="upPlayerPos">Player Position</label>
+        <input id="upPlayerPos" type="text" />
 
-        <label  for="upPlayerTeam">Player Team</label>
-        <input id = 'upPlayerTeam' type="text">
-      
+        <label for="upPlayerTeam">Player Team</label>
+        <input id="upPlayerTeam" type="text" />
+
         <div class="form-buttons">
-          <button id = 'submitUpdate'type="submit" class="btn">submit</button>
-          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-        
+          <button id="submitUpdate" type="submit" class="btn">submit</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">
+            Close
+          </button>
         </div>
-        </form>
-      </div>
-    
-</body>
-<script src="page.js"></script>
+      </form>
+    </div>
+    <div id="top20Div">
+    </div>
+    <input type="hidden" id="hiddenPlayerName" value="">
+  </body>
+  <script src="page.js"></script>
 </html>

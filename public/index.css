@@ -4,49 +4,90 @@
   align-items: center;
   flex-wrap: wrap;
   max-width: 800px;
-  margin: 0 auto; /* Add margin auto to horizontally center the container */
+  margin: 0 auto;
+}
+#top20Div {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .player-cont {
-  background-color: azure;
+  background-color: #303030;
+  color: #cccccc;
+  opacity: .9;
+  font-size: 1rem;
   text-align: center;
   width: 400px;
-  opacity: 0.5;
   align-items: center;
   justify-content: space-between;
   position: relative;
   margin: 10px;
   font-family: "Monomaniac One", sans-serif;
+  transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  list-style: none;
+}
+#top20playercont {
+  background-color: #303030;
+  background-color: #303030;
+  color: #cccccc;
+  opacity: .9;
+  font-size: 1rem;
+  text-align: center;
+  width: 400px;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin: 10px;
+  font-family: "Monomaniac One", sans-serif;
+  transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  list-style: none;
+}
+
+#top20playercont:hover {
+  background-color: #3b3939;
 }
 
 .player-cont:hover {
-  background-color: rgb(208, 250, 250);
+  background-color: #3b3939;
 }
 
 .deleteicon {
-  width: 35px;
-  height: 35px;
-  align-items: flex-start;
-  position: absolute; /* Add position absolute */
-  top: 5px; /* Adjust top position */
-  left: 5px; /* Adjust left position */
+  position: absolute;
+  top: 35px;
+  right: 15px;
+  transition: 0.5s color ease;
+}
+
+.deleteicon:hover {
   cursor: pointer;
+  color: #046b04;
 }
 
 .editicon {
-  width: 45px;
-  height: 45px;
-  position: absolute; /* Add position absolute */
-  top: 5px; /* Adjust top position */
-  right: 5px; /* Adjust right position */
+  position: absolute;
+  top: 10px;
+  right: 24px; 
+}
+
+.editicon:hover {
   cursor: pointer;
+  color: #046b04;
 }
 
 .edit-button {
   position: absolute; /* Add position absolute */
-  top: 5px; /* Adjust top position */
-  right: 5px; /* Adjust right position */
+  top: 10px; /* Adjust top position */
+  right: 15px;
+  transition: 0.5s color ease;
+}
+
+.edit-button:hover {
   cursor: pointer;
+  color: #046b04;
 }
 
 .form-popup {
@@ -57,10 +98,10 @@
   transform: translate(-50%, -50%);
   width: 300px;
   padding: 20px;
-  background-color: #f1f1f1;
-  border: 3px solid #ccc;
+  background-color: #303030;
+  border: 3px solid #303030;
   z-index: 9;
-  color: dimgray;
+  color:  #cccccc;
 }
 
 .form-popup h2 {
@@ -92,53 +133,11 @@
   margin-left: 10px;
 }
 
-.form-popup2 {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  padding: 20px;
-  background-color: #f1f1f1;
-  border: 3px solid #ccc;
-  z-index: 9;
-  color: dimgray;
-}
-
-.form-popup2 h2 {
-  margin-top: 0;
-}
-
-.form-popup2 form {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-popup2 label {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.form-popup2 input {
-  padding: 5px;
-  margin-bottom: 10px;
-}
-
-.form-buttons2 {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.form-buttons2 button {
-  padding: 5px 10px;
-  margin-left: 10px;
-}
-
 .page-title {
   font-family: "Bebas Neue", sans-serif;
-  text-align: center;
-  font-size: xx-large;
+  color: #cccccc;
+  margin-left: 2rem;
+  border-bottom: 3px solid #046b04;
 }
 
 .page-background {
@@ -147,8 +146,27 @@
   background-attachment: fixed;
 }
 
-.open-button {
-  cursor: pointer;
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #303030;
+  align-items: center;
+  margin-bottom: 1.5rem;
 }
 
+#list {
+  display: flex;
+  list-style: none;
+}
+
+#listitem {
+  font-size: 1.5rem;
+  margin: 0 2rem;
+  color: #cccccc;
+  transition: 0.5s color ease;
+}
+#listitem:hover {
+  cursor: pointer;
+  color: #046b04;
+}
 
